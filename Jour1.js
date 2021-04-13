@@ -1,4 +1,4 @@
-/*function Calcul(num1, num2){
+function Calcul(num1, num2){
     if(num2!=0){
         return num1 / num2;
     }else{
@@ -9,11 +9,11 @@
 var numero1 = 3;
 var numero2 = 0;
 
-console.log(numero1 + " + " + numero2 + " = " + Calcul(numero1, numero2))*/
+console.log(numero1 + " + " + numero2 + " = " + Calcul(numero1, numero2))
 
 
 
-/*console.log("Exercice 1\n");//Exercice 1:
+console.log("Exercice 1\n");//Exercice 1:
 console.log("Calculez le carré d'un nombre\n");
 function carre(b) {
     return b*b;
@@ -84,15 +84,4 @@ function tirage(){
       console.log(nb);
       console.log("Le gagnant est " + tab[nb]);
     }
-}*/
-
-
-tab = [0,2,4,6,8]
-for (i = 0; i < tab.length; i++){
-    console.log(tab[i]);
-}
-
-
-for (var j of tab){
-    console.log(j);
 }
