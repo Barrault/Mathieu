@@ -12,7 +12,7 @@
     this.Auteur = Auteur;
     this.nbrPages = nbrPages;
     this.nbpages = function(){
-      switch(this.nbrPages){
+      switch(true){
       case this.nbrPages <= 100:
         display("Nombre de pages entre 0 et 100");
       break;
