@@ -5,10 +5,8 @@ function Calcul(num1, num2){
         console.log("Division par 0 impossible");
     }
 }
-
 var numero1 = 3;
 var numero2 = 0;
-
 console.log(numero1 + " + " + numero2 + " = " + Calcul(numero1, numero2))
 
 
