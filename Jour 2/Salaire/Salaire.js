@@ -1,23 +1,36 @@
 'use strict'; 
 
-Calculer le salaire d'une personne sur base de son salaire brut en décomptant les frais suivants: 
+function personne(salaireBrut, sexe, nbPersonnesACharge){
+  
+  this.salaire = salaire;
+  this.sexe = sexe;
+  this.nbPersonnesACharge = nbPersonnesACharge;
 
-Impôts sur le revenu : 18% 
+  this.impotsAPayer = function(){
+    let taux = 0.18;
+    if(this.sexe === "F"){
+      taux-=0.02;
+    }
+    switch(nbPersonnesACharge){
+      case 3:
+        taux -= 0.01;
+      break;
+      case 4:
+        taux -= 0.02;
+    }
+    return this.salaire*taux;
+  }
 
-Assurance employé : 7% 
+  this.assuranceApayer = function(){
+    return this.salaire*0.07;
+  }
 
-Régime de pensions du Canada : 5% 
+  this.pensionAPayer = function(){
+    return this.salaire*0.05;
+  }
 
-Les personnes peuvent recevoir comme supplément un bonus de 100$ ou une allocation de 150$. 
+  this.salaireNet = function(){
+    return this.salaire - this.impotsAPayer - this.assuranceApayer - this.pensionAPayer;
+  }
 
- 
-
-Il est possible de recevoir des réductions sur les impôts sur le revenu sous certaines conditions : 
-
- 
-
-Si le travailleur est une femme, elle reçoit 2% de réduction. 
-
-Si le travailleur a 3 personnes à charge, il reçoit 1% de réduction. 
-
-Si le travailleur a 4 personnes à charge, il reçoit 2% de réduction. 
+}
